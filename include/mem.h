@@ -1,5 +1,8 @@
-#pragma once
-
+/*
+ * Copyright (c) 2023 Marc Pervaz Boocha
+ *
+ * SPDX-License-Identifier: MIT
+ */
 #ifndef CALT_MEM_H
 #define CALT_MEM_H
 #include <stddef.h>

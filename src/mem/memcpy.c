@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023 Marc Pervaz Boocha
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include <mem.h>
 
 extern inline void *calt_memcpy(void *restrict dest, void const *restrict src,

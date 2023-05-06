@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023 Marc Pervaz Boocha
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include <limits.h>
 #include <stdint.h>
 #include <mem.h>
