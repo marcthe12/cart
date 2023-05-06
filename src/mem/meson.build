@@ -1,0 +1,15 @@
+src += files([
+  'memccpy.c',
+  'memchr.c',
+  'memcmp.c',
+  'memcpy.c',
+  'memhash.c',
+  'memlen.c',
+  'memmem.c',
+  'memmove.c',
+  'memrchr.c',
+  'memrev.c',
+  'memset.c',
+  'memswap.c',
+  'memzero.c',
+])
