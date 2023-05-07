@@ -1,6 +1,7 @@
 src = files()
 
 dirs = [
+  'err',
   'alloc',
   'mem',
 ]

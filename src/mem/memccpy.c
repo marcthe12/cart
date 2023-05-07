@@ -21,6 +21,7 @@ void *calt_memccpy(void *restrict dest, void const *restrict src, unsigned char 
 	return NULL;
 }
 
-extern inline void *calt_memccpy_null(void *restrict dest,
-				    void const *restrict src,
-				    unsigned char value, size_t size);
+void *calt_memccpy_null(void *restrict dest, void const *restrict src,
+			     unsigned char value, size_t count) {
+	return dest ? calt_memccpy(dest, src, value, count) : NULL;
+}

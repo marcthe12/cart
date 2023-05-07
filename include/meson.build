@@ -1,5 +1,6 @@
 header = files([
   'calt.h',
+  'err.h',
   'mem.h',
   'alloc.h'
 ])

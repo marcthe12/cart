@@ -1,6 +1,6 @@
 dirs = [
-  'alloc',
   'mem',
+  'alloc',
 ]
 
 foreach dir: dirs

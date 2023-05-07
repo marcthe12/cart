@@ -6,5 +6,11 @@
 
 #include <alloc.h>
 
-extern inline void *calt_malloc(size_t size);
-
+void *calt_malloc(size_t size) {
+	if (size) {
+		struct calt_alloc alloc = calt_get_alloc();
+		return alloc.malloc ? alloc.malloc(size) : NULL;
+	} else {
+		return NULL;
+	}
+}

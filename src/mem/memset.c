@@ -6,6 +6,18 @@
 
 #include <mem.h>
 
-extern inline void *calt_memset(void *dest, unsigned char value, size_t count);
-extern inline void *calt_memset_null(void *dest, unsigned char value, size_t count);
+void *calt_memset(void *restrict dest, unsigned char value, size_t count) {
+	unsigned char *p = dest;
+
+	while (count-- > 0) {
+		*p++ = value;
+	}
+
+	return dest;
+}
+
+void *calt_memset_null(void *dest, unsigned char value, size_t count) {
+	return dest ? calt_memset(dest, value, count) : NULL;
+}
+
 

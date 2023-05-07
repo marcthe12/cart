@@ -5,10 +5,21 @@
  */
 
 #include <mem.h>
+void *calt_memcpy(void *restrict dest, const void *restrict src,
+		       size_t count) {
+	unsigned char *d = dest;
+	unsigned char const *s = src;
 
-extern inline void *calt_memcpy(void *restrict dest, void const *restrict src,
-			      size_t count);
+	while (count-- > 0) {
+		*d++ = *s++;
+	}
+
+	return dest;
+}
 
 
-extern inline void *calt_memcpy_null(void *restrict dest, void const *restrict src,
-			      size_t count);
+void *calt_memcpy_null(void *restrict dest, void const *restrict src,
+			    size_t count) {
+	return dest ? calt_memcpy(dest, src, count) : NULL;
+}
+

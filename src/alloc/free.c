@@ -6,5 +6,9 @@
 
 #include <alloc.h>
 
-extern inline void calt_free(void *ptr);
+void calt_free(void *ptr) {
+	if (ptr) {
+		calt_get_alloc().free(ptr);
+	}
+}
 

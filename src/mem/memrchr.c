@@ -6,4 +6,15 @@
 
 #include <mem.h>
 
-extern inline void *calt_memrchr(void const *ptr, unsigned char value, size_t count);
+void *calt_memrchr(void const *ptr, unsigned char value, size_t count) {
+	unsigned char const *p = ptr;
+	p = p + count;
+
+	while (count > 0) {
+		if (*(--p) == value) {
+			return (void *)p;
+		}
+	}
+
+	return NULL;
+}
